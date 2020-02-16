@@ -95,6 +95,17 @@ function imagesBuild(){
           .pipe(dest('./build/img'));
 }
 
+function fontsDev(){
+  return src('./src/fonts/*')
+          .pipe(dest('./build/fonts'))
+          .pipe(browserSync.stream());
+}
+
+function fontsBuild(){
+  return src('./src/fonts/*')
+          .pipe(dest('./build/fonts'));
+}
+
 function watching(){
   browserSync.init({
     server: {
@@ -119,7 +130,8 @@ exports.build = series(
     htmlBuild,
     stylesBuild,
     // scriptsBuild,
-    imagesBuild)
+    imagesBuild,
+    fontsBuild)
 );
 
 exports.dev = series(
@@ -128,6 +140,7 @@ exports.dev = series(
     htmlDev,
     stylesDev,
     // scriptsDev,
-    imagesDev),
+    imagesDev,
+    fontsDev),
   watching
 );

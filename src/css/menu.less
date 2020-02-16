@@ -1,0 +1,51 @@
+.menu {
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    width: 345px;
+    height: 345px;
+    padding-top: 203px;
+
+    border-radius: 50%;
+    box-shadow: 0 0 0 9px rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-repeat: no-repeat;
+    background-position: center bottom 184px;
+
+    font-size: 28px;
+    color: #242424;
+
+    &_trade {
+      background-image: url(/img/icon1.png);
+    }
+
+    &_invest {
+      background-image: url(/img/icon2.png);
+    }
+
+    &_invite {
+      background-image: url(/img/icon3.png);
+    }
+
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 1px #00b0a2, 0 0 0 9px rgba(255, 255, 255, 0.6);
+    }
+  }
+}
