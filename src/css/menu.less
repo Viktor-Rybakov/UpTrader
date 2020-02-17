@@ -16,8 +16,8 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
     width: 345px;
     height: 345px;
     padding-top: 203px;
@@ -30,6 +30,21 @@
 
     font-size: 28px;
     color: #242424;
+
+    @media (max-width: 1140px) {
+      width: 250px;
+      height: 250px;
+      padding-top: 140px;
+
+      background-position: center bottom 135px;
+    }
+
+    @media (max-width: 900px) {
+      width: 220px;
+      height: 220px;
+      padding-top: 126px;
+      background-position: center bottom 105px;
+    }
 
     &_trade {
       background-image: url(/img/icon1.png);

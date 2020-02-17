@@ -12,13 +12,14 @@ const htmlbeautify = require('gulp-html-beautify');
 const gulpImage = require('gulp-image');
 const rename = require('gulp-rename');
 
-// const jsFiles = [
-  
-// ]
+const jsFiles = [
+  './src/js/tabs.js',
+  './src/js/accordion.js'
+]
 
 const cssFiles = [
   './node_modules/normalize.css/normalize.css',
-  './src/css/**/*.less'
+  './src/css/**/*.less',
 ];
 
 function htmlDev(){
@@ -66,9 +67,7 @@ function stylesBuild(){
 function scriptsDev(){
   return src(jsFiles)
           .pipe(concat('scripts.js'))
-          .pipe(uglify({
-            toplevel: true
-          }))
+          // .uglify()
           .pipe(dest('./build/js'))
           .pipe(browserSync.stream());
 }
@@ -76,9 +75,7 @@ function scriptsDev(){
 function scriptsBuild(){
   return src(jsFiles)
           .pipe(concat('scripts.js'))
-          .pipe(uglify({
-            toplevel: true
-          }))
+          // .uglify()
           .pipe(dest('./build/js'));
 }
 
@@ -129,7 +126,7 @@ exports.build = series(
   parallel(
     htmlBuild,
     stylesBuild,
-    // scriptsBuild,
+    scriptsBuild,
     imagesBuild,
     fontsBuild)
 );
@@ -139,7 +136,7 @@ exports.dev = series(
   parallel(
     htmlDev,
     stylesDev,
-    // scriptsDev,
+    scriptsDev,
     imagesDev,
     fontsDev),
   watching

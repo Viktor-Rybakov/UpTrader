@@ -16,43 +16,43 @@
         <nav class="menu first-section__menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="#second-section" class="menu__link menu__link_trade">Торговать</a>
+              <a href="#second-section" class="menu__link menu__link_trade js-menu__link_trade" aria-controls="tabs__container_1">Торговать</a>
             </li>
             <li class="menu__item">
-              <a href="#second-section" class="menu__link menu__link_invest">Инвестировать</a>
+              <a href="#second-section" class="menu__link menu__link_invest js-menu__link_invest" aria-controls="tabs__container_2">Инвестировать</a>
             </li>
             <li class="menu__item">
-              <a href="#second-section" class="menu__link menu__link_invite">Привлекать инвесторов</a>
+              <a href="#second-section" class="menu__link menu__link_invite js-menu__link_invite" aria-controls="tabs__container_3">Привлекать инвесторов</a>
             </li>
           </ul>
         </nav>
       </div>
     </section>
 
-    <section id="second-section" class="section second-section">
-      <h2 class="visually-hidden second-section__heading">Выберите способ заработка</h2>
+    <section id="second-section" class="section second-section js-second-section">
+      <h2 class="visually-hidden js-visually-hidden second-section__heading">Выберите способ заработка</h2>
       <div class="tabs">
-        <div class="container">
+        <div class="tabs__menu">
           <div class="fix-container">
             <ul class="tabs__link-list">
               <li class="tabs__link-list-item">
-                <a href="" class="tabs__link tabs__link_active" rel="tab1">Торговать</a>
+                <a href="" class="tabs__link js-tabs__link1 tabs__link_active" aria-controls="tabs__container_1">Торговать</a>
               </li>
               <li class="tabs__link-list-item">
-                <a href="" class="tabs__link" rel="tab2">Инвестировать</a>
+                <a href="" class="tabs__link js-tabs__link2" aria-controls="tabs__container_2">Инвестировать</a>
               </li>
               <li class="tabs__link-list-item">
-                <a href="" class="tabs__link" rel="tab3">Привлекать инвесторов</a>
+                <a href="" class="tabs__link js-tabs__link3" aria-controls="tabs__container_3">Привлекать инвесторов</a>
               </li>
             </ul>
           </div>
         </div>
         
         <div class="fix-container">
-          <article class="tabs__container tabs__container_first tabs__container_active">
-            <h3 class="tabs__accordion tabs__accordion_active tabs__accordion_first" rel="tab1">Самостоятельно торговать</h3>
-            <div class="tabs__content">
-              <p class="tabs__text">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
+          <article id="tabs__container_1" class="tabs__container js-tabs__container_1 tabs__container_active" aria-expanded="true">
+            <h3 class="tabs__accordion tabs__accordion_tab1 js-tabs__accordion_tab1" aria-controls="tab1">Самостоятельно торговать</h3>
+            <div class="tabs__content js-tabs__content1" id="tab1" aria-expanded="false">
+              <p class="tabs__text">1Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
               </p>
 
               <h3 class="tabs__heading">Как это работает</h3>
@@ -70,10 +70,10 @@
             </div>
           </article>
 
-          <article class="tabs__container tabs__container_second">
-            <h3 class="tabs__accordion tabs__accordion_second" rel="tab2">Инвестировать</h3>
-            <div class="tabs__content">
-              <p class="tabs__text">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
+          <article id="tabs__container_2" class="tabs__container js-tabs__container_2" aria-expanded="false">
+            <h3 class="tabs__accordion tabs__accordion_tab2 js-tabs__accordion_tab2" aria-controls="tab2">Инвестировать</h3>
+            <div class="tabs__content js-tabs__content2" id="tab2" aria-expanded="false">
+              <p class="tabs__text">2Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
               </p>
 
               <h3 class="tabs__heading">Как это работает</h3>
@@ -91,10 +91,10 @@
             </div> 
           </article>
 
-          <article class="tabs__container tabs__container_third">
-            <h3 class="tabs__accordion tabs__accordion_third" rel="tab2">Инвестировать</h3>
-            <div class="tabs__content">
-              <p class="tabs__text">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
+          <article id="tabs__container_3" class="tabs__container js-tabs__container_3" aria-expanded="false">
+            <h3 class="tabs__accordion tabs__accordion_tab3 js-tabs__accordion_tab3" aria-controls="tab3">Инвестировать</h3>
+            <div class="tabs__content js-tabs__content3" id="tab3" aria-expanded="false" >
+              <p class="tabs__text">3Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
               </p>
 
               <h3 class="tabs__heading">Как это работает</h3>
@@ -115,6 +115,6 @@
       </div>
     </section>
   </main>
-  
+<script src="js/scripts.js"></script>
 </body>
 </html>

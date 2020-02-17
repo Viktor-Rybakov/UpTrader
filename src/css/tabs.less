@@ -1,4 +1,12 @@
 .tabs {
+  
+  &__menu {
+    border-bottom: 1px solid #c0c1ba;
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 
   &__link-list {
     display: flex;
@@ -9,10 +17,6 @@
     padding: 0;
     height: 115px;
     list-style: none;
-
-    @media (max-width: 560px) {
-      display: none;
-    }
   }
 
   &__link-list-item {
@@ -28,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
     height: 100%;
     font-size: 28px;
@@ -46,7 +51,7 @@
     display: none;
     padding-top: 86px;
 
-    @media (max-width: 560px) {
+    @media (max-width: 768px) {
       display: block;
       padding-top: 0;
       padding-right: 50px;
@@ -58,7 +63,7 @@
     &_active {
       display: block;
 
-      @media (max-width: 560px) {
+      @media (max-width: 768px) {
         padding-bottom: 271px;
         margin-bottom: 25px;
         background-image: url(/img/bg2.png);
@@ -74,7 +79,7 @@
     max-width: 680px;
     line-height: 24px;
 
-    @media (max-width: 560px) {
+    @media (max-width: 768px) {
       margin: 0 0 31px 0;
       font-size: 16px;
       line-height: 1;
@@ -86,7 +91,7 @@
     font-size: 24px;
     font-weight: 300;
 
-    @media (max-width: 560px) {
+    @media (max-width: 768px) {
       margin: 0 0 30px 0;
     }
   }
@@ -151,53 +156,54 @@
 
     cursor: pointer;
 
-    &_first {
-      background-image: url(/img/icon1.png);
-    }
+      @media (max-width: 768px) {
+        display: flex;
+      }
 
-    &_second {
-      background-image: url(/img/icon2.png);
-    }
+      &_tab1 {
+        background-image: url(/img/icon1.png);
+      }
 
-    &_third {
-      background-image: url(/img/icon3.png);
-    }
+      &_tab2 {
+        background-image: url(/img/icon2.png);
+      }
 
-    &::after {
-      content: "";
-      width: 21px;
-      height: 11px;
-      margin-right: 15px;
-      margin-left: auto;
-      background-image: url(/img/arrow.png);
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &_active {
+      &_tab3 {
+        background-image: url(/img/icon3.png);
+      }
 
       &::after {
-        transform: rotate(180deg);
+        content: "";
+        width: 21px;
+        height: 11px;
+        margin-right: 15px;
+        margin-left: auto;
+        background-image: url(/img/arrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
       }
 
-      & + .tabs__content {
-        display: block;
-      }
+      &_active {
+
+        &::after {
+          transform: rotate(180deg);
+        }
     }
 
-    @media (max-width: 560px) {
-      display: flex;
-    }
   }
 
   &__content {
-    display: none;
     padding-top: 23px;
+
+    @media (max-width: 768px) {
+      display: none;
+
+      &_active {
+        display: block;
+      }
+    }
   }
 
 
 }
 
-.container {
-  border-bottom: 1px solid #c0c1ba;
-}
