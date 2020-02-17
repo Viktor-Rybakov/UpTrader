@@ -9,6 +9,10 @@
     padding: 0;
     height: 115px;
     list-style: none;
+
+    @media (max-width: 560px) {
+      display: none;
+    }
   }
 
   &__link-list-item {
@@ -30,6 +34,7 @@
     font-weight: 400;
     border-bottom: 3px solid transparent;
 
+    &_active,
     &:hover,
     &:active {
       border-bottom: 3px solid #009e82;
@@ -37,20 +42,53 @@
     }
   }
 
-  &__content {
+  &__container {
+    display: none;
     padding-top: 86px;
+
+    @media (max-width: 560px) {
+      display: block;
+      padding-top: 0;
+      padding-right: 50px;
+      padding-left: 50px;
+      margin-bottom: 13px;
+      
+    }
+    
+    &_active {
+      display: block;
+
+      @media (max-width: 560px) {
+        padding-bottom: 271px;
+        margin-bottom: 25px;
+        background-image: url(/img/bg2.png);
+        background-position: bottom right;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   &__text {
     margin: 0 0 47px 0;
     max-width: 680px;
     line-height: 24px;
+
+    @media (max-width: 560px) {
+      margin: 0 0 31px 0;
+      font-size: 16px;
+      line-height: 1;
+    }
   }
 
   &__heading {
     margin: 0 0 35px 0;
     font-size: 24px;
     font-weight: 300;
+
+    @media (max-width: 560px) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__steps-list {
@@ -91,6 +129,70 @@
     background-color: #009e82;
     color: #feffff;
     font-weight: 500;
+
+  }
+
+  &__accordion {
+    display: none;
+
+    width: 100%;
+    height: 69px;
+    margin: 0;
+    padding-left: 75px;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    background-repeat: no-repeat;
+    background-position: 28px center;
+    background-size: 35px auto;
+
+    color: #2B2B2B;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    &_first {
+      background-image: url(/img/icon1.png);
+    }
+
+    &_second {
+      background-image: url(/img/icon2.png);
+    }
+
+    &_third {
+      background-image: url(/img/icon3.png);
+    }
+
+    &::after {
+      content: "";
+      width: 21px;
+      height: 11px;
+      margin-right: 15px;
+      margin-left: auto;
+      background-image: url(/img/arrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_active {
+
+      &::after {
+        transform: rotate(180deg);
+      }
+
+      & + .tabs__content {
+        display: block;
+      }
+    }
+
+    @media (max-width: 560px) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding-top: 23px;
   }
 
 
