@@ -67,7 +67,7 @@ function stylesBuild(){
 function scriptsDev(){
   return src(jsFiles)
           .pipe(concat('scripts.js'))
-          // .uglify()
+          // .pipe(uglify())
           .pipe(dest('./build/js'))
           .pipe(browserSync.stream());
 }
@@ -75,7 +75,7 @@ function scriptsDev(){
 function scriptsBuild(){
   return src(jsFiles)
           .pipe(concat('scripts.js'))
-          // .uglify()
+          // .pipe(uglify())
           .pipe(dest('./build/js'));
 }
 

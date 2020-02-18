@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "gulp-sourcemaps": "^2.6.5",
-    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   }
 }
