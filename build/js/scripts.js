@@ -1,5 +1,3 @@
-
-
 let link1 = document.querySelector('.js-menu__link_trade');
 let link2 = document.querySelector('.js-menu__link_invest');
 let link3 = document.querySelector('.js-menu__link_invite');
